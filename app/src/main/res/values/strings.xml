@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DrinksMaster</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pumpkin_apps">Pumpkin Apps</string>
+    <string name="desarrollo_de_apps_android">Desarrollo de Apps Android</string>
+    <string name="do_you_want_to_exit">Do you want to exit?</string>
+    <string name="exit">Exit</string>
+    <string name="cancel">cancel</string>
+    <string name="favorites_drinks">Favorites Drinks</string>
+    <string name="long_press_to_delete_drink">Long Press to delete Drink</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="preparation_mode">Preparation mode</string>
+</resources>

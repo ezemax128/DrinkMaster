@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_navigation"
+    app:startDestination="@id/myBrandFragment">
+
+    <fragment
+        android:id="@+id/listadoCocktail2"
+        android:name="com.android.drinksmaster.UI.listadoCocktail"
+        android:label="fragment_listado_cocktail"
+        tools:layout="@layout/fragment_listado_cocktail" >
+        <action
+            android:id="@+id/action_listadoCocktail2_to_coktailDetail2"
+            app:destination="@id/coktailDetail2" />
+        <action
+            android:id="@+id/action_listadoCocktail2_to_favoritesfragment"
+            app:destination="@id/favoritesfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coktailDetail2"
+        android:name="com.android.drinksmaster.UI.coktailDetail"
+        android:label="fragment_coktail_detail"
+        tools:layout="@layout/fragment_coktail_detail" />
+    <fragment
+        android:id="@+id/favoritesfragment"
+        android:name="com.android.drinksmaster.UI.favoritesfragment"
+        android:label="fragment_favoritesfragment"
+        tools:layout="@layout/fragment_favoritesfragment" >
+        <action
+            android:id="@+id/action_favoritesfragment_to_coktailDetail2"
+            app:destination="@id/coktailDetail2" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBrandFragment"
+        android:name="com.android.drinksmaster.UI.myBrandFragment"
+        android:label="fragment_my_brand"
+        tools:layout="@layout/fragment_my_brand" >
+        <action
+            android:id="@+id/action_myBrandFragment_to_listadoCocktail2"
+            app:destination="@id/listadoCocktail2" />
+    </fragment>
+</navigation>

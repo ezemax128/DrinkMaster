@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/drawable/splash_screen.xml" value="0.17407407407407408" />
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/layout/activity_main.xml" value="0.309375" />
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/layout/base_warning_alert.xml" value="0.3333333333333333" />
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/layout/drinks_rows.xml" value="0.1983695652173913" />
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/layout/fragment_coktail_detail.xml" value="0.3333333333333333" />
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/layout/fragment_favoritesfragment.xml" value="0.20108695652173914" />
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/layout/fragment_listado_cocktail.xml" value="0.5" />
+        <entry key="..\:/PROGRAMACION/ANDROID/KOTLIN/DrinksMaster/app/src/main/res/layout/fragment_my_brand.xml" value="0.3333333333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.coktailDetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/TragoName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/aldrich"
+                android:textAlignment="center"
+                android:textColor="#EA7D36"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imagenTrago"
+            android:layout_width="437dp"
+            android:layout_height="381dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:src="@mipmap/ic_launcher_round"
+            tools:ignore="MissingConstraints" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/btnFavorite"
+            android:layout_width="112dp"
+            android:layout_height="106dp"
+            android:clickable="true"
+            app:lottie_loop="false" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/ingredients"
+            android:textAlignment="center"
+            android:textColor="#055CDC"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/ing01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#3E02E3"
+            android:textAlignment="center"
+            tools:text="Ingrediente 01" />
+
+        <TextView
+            android:id="@+id/med01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textColor="@color/purple_500"
+            tools:text="2.5oz" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/ing02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#3E02E3"
+            tools:text="Ingrediente 01" />
+
+        <TextView
+            android:id="@+id/med02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textColor="@color/purple_500"
+            tools:text="2.5oz" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/ing03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#3E02E3"
+            tools:text="Ingrediente 01" />
+
+        <TextView
+            android:id="@+id/med03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textColor="@color/purple_500"
+            tools:text="2.5oz" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/ing04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#3E02E3"
+            tools:text="Ingrediente 01" />
+
+        <TextView
+            android:id="@+id/med04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textColor="@color/purple_500"
+            tools:text="2.5oz" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/ing05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#3E02E3"
+            tools:text="Ingrediente 01" />
+
+        <TextView
+            android:id="@+id/med05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textColor="@color/purple_500"
+            tools:text="2.5oz" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/ing06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#3E02E3"
+            tools:text="Ingrediente 01" />
+
+        <TextView
+            android:id="@+id/med06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textFontWeight="@integer/material_motion_duration_long_2"
+            android:textColor="@color/purple_500"
+            android:textAlignment="center"
+            tools:text="2.5oz" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/preparation_mode"
+            android:textAlignment="center"
+            android:textColor="#FF5722"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/descritionTrago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="@color/purple_200"
+            android:textSize="20sp"
+            tools:text="Esta es una descripcion" />
+    </LinearLayout>
+
+
+</ScrollView>
