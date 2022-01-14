@@ -15,7 +15,8 @@ import com.android.drinksmaster.data.model.Drink
 class MainAdapter(
     private val context: Context,
     private val listadoCocktail: List<Drink>,
-    private val itemClickRecycler: clickedItemRecycler
+    private val itemClickRecycler: clickedItemRecycler,
+    private val longClickActivated: Boolean,
 ) :
     RecyclerView.Adapter<MainAdapter.mainViewHolder>() {
     interface clickedItemRecycler {
@@ -35,8 +36,9 @@ class MainAdapter(
             medida03: String?,
             medida04: String?,
             medida05: String?,
-            medida06: String?
+            medida06: String?,
         )
+
         fun onItemLongClickRecycler(position: Int, drink: Drink)
     }
 
@@ -83,28 +85,31 @@ class MainAdapter(
                     drink.medida06
                 )
             }
-            itemx.setOnLongClickListener{
-                val drinkToDelete = Drink(
-                    drink.id,
-                    drink.image,
-                    drink.name,
-                    drink.description,
-                    drink.ingrediente01,
-                    drink.ingrediente02,
-                    drink.ingrediente03,
-                    drink.ingrediente04,
-                    drink.ingrediente05,
-                    drink.ingrediente06,
-                    drink.medida01,
-                    drink.medida02,
-                    drink.medida03,
-                    drink.medida04,
-                    drink.medida05,
-                    drink.medida06
-                )
-                itemClickRecycler.onItemLongClickRecycler(position, drinkToDelete)
-                return@setOnLongClickListener true
+            if (longClickActivated) {
+                itemx.setOnLongClickListener {
+                    val drinkToDelete = Drink(
+                        drink.id,
+                        drink.image,
+                        drink.name,
+                        drink.description,
+                        drink.ingrediente01,
+                        drink.ingrediente02,
+                        drink.ingrediente03,
+                        drink.ingrediente04,
+                        drink.ingrediente05,
+                        drink.ingrediente06,
+                        drink.medida01,
+                        drink.medida02,
+                        drink.medida03,
+                        drink.medida04,
+                        drink.medida05,
+                        drink.medida06
+                    )
+                    itemClickRecycler.onItemLongClickRecycler(position, drinkToDelete)
+                    return@setOnLongClickListener true
+                }
             }
+
 
         }
     }

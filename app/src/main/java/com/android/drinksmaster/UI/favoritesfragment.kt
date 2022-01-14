@@ -73,7 +73,7 @@ class favoritesfragment : Fragment(R.layout.fragment_favoritesfragment),
                         )
                     }
                     Log.i("------", it.data.toString())
-                    binding.recyclerfavorites.adapter = MainAdapter(requireContext(), lista, this)
+                    binding.recyclerfavorites.adapter = MainAdapter(requireContext(), lista, this, true)
                 }
                 is Resourse.Failure -> {
                     binding.loadingProgressBar.visibility = View.GONE

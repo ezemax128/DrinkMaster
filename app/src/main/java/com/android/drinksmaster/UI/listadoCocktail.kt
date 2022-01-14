@@ -22,6 +22,7 @@ import com.android.drinksmaster.data.model.Drink
 import com.android.drinksmaster.databinding.FragmentListadoCocktailBinding
 import com.android.drinksmaster.domain.RepoImplementer
 import com.android.drinksmaster.vo.Resourse
+import java.lang.Exception
 
 
 class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedItemRecycler {
@@ -99,7 +100,7 @@ class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedI
                     }
                     is Resourse.Success -> {
                         binding.loadingProgressBar.visibility = View.GONE
-                        binding.MainRecycler.adapter = MainAdapter(requireContext(), resultado.data, this)
+                        binding.MainRecycler.adapter = MainAdapter(requireContext(), resultado.data, this, false)
                     }
                     is Resourse.Failure -> {
                         binding.loadingProgressBar.visibility = View.GONE
@@ -122,7 +123,7 @@ class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedI
                         binding.loadingProgressBar.visibility = View.GONE
                         binding.MainRecycler.adapter = MainAdapter(
                             requireContext(),
-                            result.data, this
+                            result.data, this, false
                         )
                     }
                     is Resourse.Failure -> {
@@ -193,7 +194,6 @@ class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedI
     }
 
     override fun onItemLongClickRecycler(position: Int, drink: Drink) {
-
     }
 
 

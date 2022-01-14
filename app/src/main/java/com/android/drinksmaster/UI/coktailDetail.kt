@@ -37,10 +37,7 @@ class coktailDetail : Fragment(R.layout.fragment_coktail_detail) {
     private lateinit var med06: String
     private var origen = false
     private val viewModel by viewModels<MainViewModel> {
-        VmFactory(
-            RepoImplementer(DataSource(
-                AppDataBase.getDataBase(requireActivity().
-        applicationContext)))
+        VmFactory(RepoImplementer(DataSource(AppDataBase.getDataBase(requireActivity().applicationContext)))
         )
     }
 

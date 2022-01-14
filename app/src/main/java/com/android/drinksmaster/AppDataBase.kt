@@ -8,6 +8,8 @@ import androidx.room.RoomDatabase
 import com.android.drinksmaster.data.model.DrinkEntity
 import com.android.drinksmaster.domain.TragosDao
 
+
+//con este codigo declaramos una base de datos de tipo ROOM
 @Database(entities = arrayOf(DrinkEntity::class), version = 1)
 abstract class AppDataBase : RoomDatabase() {
 
