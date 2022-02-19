@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listadoCocktail2"
-        android:name="com.android.drinksmaster.UI.listadoCocktail"
+        android:name="com.android.drinksmaster.presentation.view.listadoCocktail"
         android:label="fragment_listado_cocktail"
         tools:layout="@layout/fragment_listado_cocktail" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/coktailDetail2"
-        android:name="com.android.drinksmaster.UI.coktailDetail"
+        android:name="com.android.drinksmaster.presentation.view.coktailDetail"
         android:label="fragment_coktail_detail"
         tools:layout="@layout/fragment_coktail_detail" />
     <fragment
         android:id="@+id/favoritesfragment"
-        android:name="com.android.drinksmaster.UI.favoritesfragment"
+        android:name="com.android.drinksmaster.presentation.view.favoritesfragment"
         android:label="fragment_favoritesfragment"
         tools:layout="@layout/fragment_favoritesfragment" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/myBrandFragment"
-        android:name="com.android.drinksmaster.UI.myBrandFragment"
+        android:name="com.android.drinksmaster.presentation.view.myBrandFragment"
         android:label="fragment_my_brand"
         tools:layout="@layout/fragment_my_brand" >
         <action

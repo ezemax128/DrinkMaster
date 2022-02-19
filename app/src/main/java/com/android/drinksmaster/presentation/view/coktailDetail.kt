@@ -1,20 +1,18 @@
-package com.android.drinksmaster.UI
+package com.android.drinksmaster.presentation.view
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import coil.load
-import com.android.drinksmaster.AppDataBase
+import com.android.drinksmaster.data.local.AppDataBase
 import com.android.drinksmaster.R
-import com.android.drinksmaster.UI.viewModel.MainViewModel
-import com.android.drinksmaster.UI.viewModel.VmFactory
+import com.android.drinksmaster.presentation.viewModel.MainViewModel
+import com.android.drinksmaster.presentation.viewModel.VmFactory
 import com.android.drinksmaster.data.DataSource
-import com.android.drinksmaster.data.model.DrinkEntity
+import com.android.drinksmaster.presentation.model.DrinkEntity
 import com.android.drinksmaster.databinding.FragmentCoktailDetailBinding
-import com.android.drinksmaster.domain.RepoImplementer
+import com.android.drinksmaster.data.repository.RepoImplementer
 
 
 class coktailDetail : Fragment(R.layout.fragment_coktail_detail) {
@@ -37,7 +35,8 @@ class coktailDetail : Fragment(R.layout.fragment_coktail_detail) {
     private lateinit var med06: String
     private var origen = false
     private val viewModel by viewModels<MainViewModel> {
-        VmFactory(RepoImplementer(DataSource(AppDataBase.getDataBase(requireActivity().applicationContext)))
+        VmFactory(
+            RepoImplementer(DataSource(AppDataBase.getDataBase(requireActivity().applicationContext)))
         )
     }
 

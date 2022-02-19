@@ -1,11 +1,9 @@
 package com.android.drinksmaster.data
 
-import android.util.Log
-import com.android.drinksmaster.vo.Resourse
-import com.android.drinksmaster.vo.RetrofitClient
-import com.android.drinksmaster.AppDataBase
-import com.android.drinksmaster.data.model.Drink
-import com.android.drinksmaster.data.model.DrinkEntity
+import com.android.drinksmaster.presentation.model.Resourse
+import com.android.drinksmaster.data.local.AppDataBase
+import com.android.drinksmaster.presentation.model.Drink
+import com.android.drinksmaster.presentation.model.DrinkEntity
 
 
 class DataSource(private val appDataBase: AppDataBase) {
@@ -13,7 +11,7 @@ class DataSource(private val appDataBase: AppDataBase) {
         return Resourse.Success(RetrofitClient.webservice.getTragosByName(tragoName).drinkList)
     }
 
-    suspend fun getTragosByIngredients(ingredientName: String): Resourse<List<Drink>>{
+    suspend fun getTragosByIngredients(ingredientName: String): Resourse<List<Drink>> {
         return Resourse.Success(RetrofitClient.webservice.getTragosByIngredient(ingredientName).drinkList)
     }
 

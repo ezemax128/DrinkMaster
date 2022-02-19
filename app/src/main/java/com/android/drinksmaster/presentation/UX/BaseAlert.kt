@@ -1,21 +1,14 @@
-package com.android.drinksmaster.UX
+package com.android.drinksmaster.presentation.UX
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.core.app.ActivityCompat.finishAffinity
-import coil.load
 import com.airbnb.lottie.LottieAnimationView
-import com.android.drinksmaster.MainActivity
 import com.android.drinksmaster.R
-import com.android.drinksmaster.SplashActivity
 import com.google.android.material.internal.ContextUtils.getActivity
-
-import kotlin.system.exitProcess
 
 class BaseAlert {
 

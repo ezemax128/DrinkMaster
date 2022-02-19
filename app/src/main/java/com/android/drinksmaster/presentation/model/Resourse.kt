@@ -1,4 +1,4 @@
-package com.android.drinksmaster.vo
+package com.android.drinksmaster.presentation.model
 
 import java.lang.Exception
 

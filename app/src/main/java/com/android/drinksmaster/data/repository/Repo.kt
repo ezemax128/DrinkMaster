@@ -1,8 +1,8 @@
-package com.android.drinksmaster.domain
+package com.android.drinksmaster.data.repository
 
-import com.android.drinksmaster.vo.Resourse
-import com.android.drinksmaster.data.model.Drink
-import com.android.drinksmaster.data.model.DrinkEntity
+import com.android.drinksmaster.presentation.model.Resourse
+import com.android.drinksmaster.presentation.model.Drink
+import com.android.drinksmaster.presentation.model.DrinkEntity
 
 interface Repo {
     suspend fun newCocktailList(tragoName: String): Resourse<List<Drink>>

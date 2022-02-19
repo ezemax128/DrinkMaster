@@ -1,6 +1,5 @@
-package com.android.drinksmaster.vo
+package com.android.drinksmaster.data
 
-import com.android.drinksmaster.domain.WebService
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

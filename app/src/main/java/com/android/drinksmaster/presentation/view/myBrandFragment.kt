@@ -1,11 +1,9 @@
-package com.android.drinksmaster.UI
+package com.android.drinksmaster.presentation.view
 
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
 import com.android.drinksmaster.R

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrinksMaster">
         <activity
-            android:name=".SplashActivity"
+            android:name=".presentation.view.SplashActivity"
             android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/splash_Screen">
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.view.MainActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
 

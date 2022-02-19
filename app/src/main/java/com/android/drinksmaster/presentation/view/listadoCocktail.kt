@@ -1,4 +1,4 @@
-package com.android.drinksmaster.UI
+package com.android.drinksmaster.presentation.view
 
 import android.os.Bundle
 import android.view.View
@@ -11,18 +11,17 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.drinksmaster.AppDataBase
+import com.android.drinksmaster.data.local.AppDataBase
 import com.android.drinksmaster.R
-import com.android.drinksmaster.UI.MainAdapter.clickedItemRecycler
-import com.android.drinksmaster.UI.viewModel.MainViewModel
-import com.android.drinksmaster.UI.viewModel.VmFactory
-import com.android.drinksmaster.UX.BaseAlert
+import com.android.drinksmaster.presentation.view.MainAdapter.clickedItemRecycler
+import com.android.drinksmaster.presentation.viewModel.MainViewModel
+import com.android.drinksmaster.presentation.viewModel.VmFactory
+import com.android.drinksmaster.presentation.UX.BaseAlert
 import com.android.drinksmaster.data.DataSource
-import com.android.drinksmaster.data.model.Drink
+import com.android.drinksmaster.presentation.model.Drink
 import com.android.drinksmaster.databinding.FragmentListadoCocktailBinding
-import com.android.drinksmaster.domain.RepoImplementer
-import com.android.drinksmaster.vo.Resourse
-import java.lang.Exception
+import com.android.drinksmaster.data.repository.RepoImplementer
+import com.android.drinksmaster.presentation.model.Resourse
 
 
 class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedItemRecycler {
@@ -100,7 +99,7 @@ class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedI
                     }
                     is Resourse.Success -> {
                         binding.loadingProgressBar.visibility = View.GONE
-                        binding.MainRecycler.adapter = MainAdapter(requireContext(), resultado.data, this, false)
+                        binding.MainRecycler.adapter = MainAdapter(resultado.data, this, false)
                     }
                     is Resourse.Failure -> {
                         binding.loadingProgressBar.visibility = View.GONE
@@ -122,7 +121,6 @@ class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedI
                     is Resourse.Success -> {
                         binding.loadingProgressBar.visibility = View.GONE
                         binding.MainRecycler.adapter = MainAdapter(
-                            requireContext(),
                             result.data, this, false
                         )
                     }
@@ -154,41 +152,24 @@ class listadoCocktail() : Fragment(R.layout.fragment_listado_cocktail), clickedI
 
     }//---------
 
-    override fun onItemClickRecycler(
-        id: String,
-        name: String,
-        description: String,
-        image: String,
-        ingrediente01: String?,
-        ingrediente02: String?,
-        ingrediente03: String?,
-        ingrediente04: String?,
-        ingrediente05: String?,
-        ingrediente06: String?,
-        medida01: String?,
-        medida02: String?,
-        medida03: String?,
-        medida04: String?,
-        medida05: String?,
-        medida06: String?
-    ) {
+    override fun onItemClickRecycler(drink: Drink) {
         val bundle = Bundle()
-        bundle.putString("id", id)
-        bundle.putString("nameTrago", name)
-        bundle.putString("descripcionTrago", description)
-        bundle.putString("image", image)
-        bundle.putString("ing01", ingrediente01)
-        bundle.putString("ing02", ingrediente02)
-        bundle.putString("ing03", ingrediente03)
-        bundle.putString("ing04", ingrediente04)
-        bundle.putString("ing05", ingrediente05)
-        bundle.putString("ing06", ingrediente06)
-        bundle.putString("med01", medida01)
-        bundle.putString("med02", medida02)
-        bundle.putString("med03", medida03)
-        bundle.putString("med04", medida04)
-        bundle.putString("med05", medida05)
-        bundle.putString("med06", medida06)
+        bundle.putString("id", drink.id)
+        bundle.putString("nameTrago", drink.name)
+        bundle.putString("descripcionTrago", drink.description)
+        bundle.putString("image", drink.image)
+        bundle.putString("ing01", drink.ingrediente01)
+        bundle.putString("ing02", drink.ingrediente02)
+        bundle.putString("ing03", drink.ingrediente03)
+        bundle.putString("ing04", drink.ingrediente04)
+        bundle.putString("ing05", drink.ingrediente05)
+        bundle.putString("ing06", drink.ingrediente06)
+        bundle.putString("med01", drink.medida01)
+        bundle.putString("med02", drink.medida02)
+        bundle.putString("med03", drink.medida03)
+        bundle.putString("med04", drink.medida04)
+        bundle.putString("med05", drink.medida05)
+        bundle.putString("med06", drink.medida06)
         findNavController().navigate(R.id.action_listadoCocktail2_to_coktailDetail2, bundle)
 
     }

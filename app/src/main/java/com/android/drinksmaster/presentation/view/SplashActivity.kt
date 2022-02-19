@@ -1,4 +1,4 @@
-package com.android.drinksmaster
+package com.android.drinksmaster.presentation.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -1,10 +1,9 @@
-package com.android.drinksmaster.domain
+package com.android.drinksmaster.data.repository
 
-import android.util.Log
-import com.android.drinksmaster.vo.Resourse
+import com.android.drinksmaster.presentation.model.Resourse
 import com.android.drinksmaster.data.DataSource
-import com.android.drinksmaster.data.model.Drink
-import com.android.drinksmaster.data.model.DrinkEntity
+import com.android.drinksmaster.presentation.model.Drink
+import com.android.drinksmaster.presentation.model.DrinkEntity
 
 class RepoImplementer(private val dataSource: DataSource) : Repo {
     override suspend fun newCocktailList(tragoName: String): Resourse<List<Drink>> {

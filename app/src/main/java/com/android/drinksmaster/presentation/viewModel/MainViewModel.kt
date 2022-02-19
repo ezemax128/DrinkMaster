@@ -1,11 +1,9 @@
-package com.android.drinksmaster.UI.viewModel
+package com.android.drinksmaster.presentation.viewModel
 
-import android.util.Log
 import androidx.lifecycle.*
-import com.android.drinksmaster.data.model.Drink
-import com.android.drinksmaster.vo.Resourse
-import com.android.drinksmaster.data.model.DrinkEntity
-import com.android.drinksmaster.domain.Repo
+import com.android.drinksmaster.presentation.model.Resourse
+import com.android.drinksmaster.presentation.model.DrinkEntity
+import com.android.drinksmaster.data.repository.Repo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

@@ -1,12 +1,10 @@
-package com.android.drinksmaster
+package com.android.drinksmaster.data.local
 
 import android.content.Context
-import android.util.Log
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.android.drinksmaster.data.model.DrinkEntity
-import com.android.drinksmaster.domain.TragosDao
+import com.android.drinksmaster.presentation.model.DrinkEntity
 
 
 //con este codigo declaramos una base de datos de tipo ROOM

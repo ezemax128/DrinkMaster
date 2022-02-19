@@ -1,11 +1,8 @@
-package com.android.drinksmaster
+package com.android.drinksmaster.presentation.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import androidx.activity.viewModels
-import androidx.core.app.ActivityCompat
+import com.android.drinksmaster.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

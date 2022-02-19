@@ -1,4 +1,4 @@
-package com.android.drinksmaster.UI
+package com.android.drinksmaster.presentation.view
 
 import android.os.Bundle
 import android.util.Log
@@ -10,16 +10,16 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.drinksmaster.AppDataBase
+import com.android.drinksmaster.data.local.AppDataBase
 import com.android.drinksmaster.R
-import com.android.drinksmaster.UI.viewModel.MainViewModel
-import com.android.drinksmaster.UI.viewModel.VmFactory
+import com.android.drinksmaster.presentation.viewModel.MainViewModel
+import com.android.drinksmaster.presentation.viewModel.VmFactory
 import com.android.drinksmaster.data.DataSource
-import com.android.drinksmaster.data.model.Drink
-import com.android.drinksmaster.data.model.DrinkEntity
+import com.android.drinksmaster.presentation.model.Drink
+import com.android.drinksmaster.presentation.model.DrinkEntity
 import com.android.drinksmaster.databinding.FragmentFavoritesfragmentBinding
-import com.android.drinksmaster.domain.RepoImplementer
-import com.android.drinksmaster.vo.Resourse
+import com.android.drinksmaster.data.repository.RepoImplementer
+import com.android.drinksmaster.presentation.model.Resourse
 
 
 class favoritesfragment : Fragment(R.layout.fragment_favoritesfragment),
@@ -73,7 +73,7 @@ class favoritesfragment : Fragment(R.layout.fragment_favoritesfragment),
                         )
                     }
                     Log.i("------", it.data.toString())
-                    binding.recyclerfavorites.adapter = MainAdapter(requireContext(), lista, this, true)
+                    binding.recyclerfavorites.adapter = MainAdapter(lista, this, true)
                 }
                 is Resourse.Failure -> {
                     binding.loadingProgressBar.visibility = View.GONE
@@ -130,6 +130,8 @@ class favoritesfragment : Fragment(R.layout.fragment_favoritesfragment),
         bundle.putString("med06", medida06)
         findNavController().navigate(R.id.action_favoritesfragment_to_coktailDetail2, bundle)
     }
+
+
 
     override fun onItemLongClickRecycler(position: Int, drink: Drink) {
         val entidad = DrinkEntity(

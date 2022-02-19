@@ -1,8 +1,7 @@
-package com.android.drinksmaster.domain
+package com.android.drinksmaster.data.local
 
 import androidx.room.*
-import com.android.drinksmaster.data.model.Drink
-import com.android.drinksmaster.data.model.DrinkEntity
+import com.android.drinksmaster.presentation.model.DrinkEntity
 @Dao
 interface TragosDao {
 

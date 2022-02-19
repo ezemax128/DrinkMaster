@@ -1,8 +1,8 @@
-package com.android.drinksmaster.UI.viewModel
+package com.android.drinksmaster.presentation.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.android.drinksmaster.domain.Repo
+import com.android.drinksmaster.data.repository.Repo
 
 class VmFactory(private val repo: Repo):ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

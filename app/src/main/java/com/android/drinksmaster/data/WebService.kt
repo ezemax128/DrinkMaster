@@ -1,6 +1,6 @@
-package com.android.drinksmaster.domain
+package com.android.drinksmaster.data
 
-import com.android.drinksmaster.data.model.DrinksList
+import com.android.drinksmaster.presentation.model.DrinksList
 import retrofit2.http.GET
 import retrofit2.http.Query
 

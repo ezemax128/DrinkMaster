@@ -1,4 +1,4 @@
-package com.android.drinksmaster.data.model
+package com.android.drinksmaster.presentation.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
